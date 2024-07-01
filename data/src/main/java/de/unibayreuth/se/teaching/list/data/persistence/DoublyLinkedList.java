@@ -20,6 +20,15 @@ public class DoublyLinkedList {
 
     private static final Logger logger = LoggerFactory.getLogger(DoublyLinkedListComponent.class);
 
+    private static DoublyLinkedList instance;
+
+    public static DoublyLinkedList getInstance() {
+        if (instance == null) {
+            instance = new DoublyLinkedList();
+        }
+        return instance;
+    }
+
     /**
      * Add an element at the end of the list
      * @param e New list element
